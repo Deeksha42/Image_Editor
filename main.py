@@ -80,20 +80,22 @@ def blend1(val):
     lull.pack()
 
 # Grayscale function
+
 def gray(f1):
     img = Image.open(f1)
     gr = ImageOps.grayscale(img)
-    #change path for saving image file in required directory
-    gr.save("C:\pictures\gr1.jpg")
-    new("gr1.jpg")
+    gr.save(r"C:\pictures\gr1.jpg")  # Update the path as needed
+    new(r"C:\pictures\gr1.jpg")  # Open the newly saved grayscale image
+
+    
 
 # Blur function
 def blur1(f1):
     img = Image.open(f1)
     br = img.filter(ImageFilter.BoxBlur(5))
     #change path for saving image file in required directory
-    br.save("C:\pictures\blur1.jpg")
-    new("blur1.jpg")
+    br.save(r"C:\pictures\blur1.jpg")
+    new(r"C:\pictures\blur1.jpg")
 
 # File selection dialog
 def file1(button):
